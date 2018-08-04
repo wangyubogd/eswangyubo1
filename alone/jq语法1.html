@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="div1">
+
+</div>
+<h2>
+    你的爱好是
+</h2>
+<input type="checkbox">足
+<input type="checkbox">蓝
+<input type="checkbox">乒
+<input type="checkbox">排
+<br/>
+<input type="button" id="all" value="全选">
+<button id="no">全不选</button>
+<button id="fanxuan">反选</button>
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $('#all').on('click',function () {
+            $('input[type="checkbox"]').prop('checked','checked');
+        });
+        $('#no').on('click',function () {
+            $('input[type="checkbox"]').prop('checked',false);
+        });
+        $('#fanxuan').on('click',function () {
+            $('input[type="fchecked"]').each(function (index,elem) {
+              if ($(elem).prop('checked')){
+                  $(elem).prop('checked',false);
+
+              }else{
+                      $(elem).prop('checked',ture);
+                  }
+
+
+
+            });
+        })  
+    })
+</script>
+
+
+</body>
+</html>

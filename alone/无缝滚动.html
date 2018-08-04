@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #header{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 100px auto;
+            border: 1px solid #000;
+            overflow: hidden;
+
+
+
+        }
+        #header .huadong{
+            width: 444px;
+            position: absolute;
+            left:0;
+
+
+        }
+        #header .huadong li{
+            height: 100px;
+            width: 100px;
+            background: #000;
+            color: white;
+            float: left;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 100px;
+
+        }
+        #header .dianji{
+            position: absolute;
+            bottom:20px;
+            left:50%;
+            transform: translateX(-50%);
+
+        }
+        #header .dianji span{
+            background: #ccc ;
+            padding: 10px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="header">
+    <ul class="huadong">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div class="dianji">
+        <span id="le">向左</span>
+        <span id="ri">向右</span>
+    </div>
+
+</div>
+<script>
+    var aH = document.getElementsByClassName('huadong');
+    var ole= document.getElementById('le');
+    var ori= document.getElementById('ri');
+    var speed = -2;
+    aH[0].innerHTML +=aH[0].innerHTML;
+    aH[0].style.width = aH[0].offsetWidth * 2 + 'px';
+
+    setInterval(function () {
+        var ileft = aH[0].offsetLeft;
+        console.log(ileft);
+        aH[0].style.left = ileft +speed+ 'px';
+        if (ileft>0){
+            aH[0].style.left = -aH[0].offsetWidth / 2 + 'px';
+
+        }
+        if (ileft<-aH[0].offsetWidth / 2) {
+            aH[0].style.left =0;
+        }
+    },50);
+    ole.onmouseover = function () {
+        speed = -2;
+    }
+    ori.onmouseover = function () {
+        speed = 2
+    }
+
+
+</script>
+
+</body>
+</html>
