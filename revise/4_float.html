@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            background: #ff0000;
+            /* overflow: hidden; */
+            /* float: left; */
+            /* height:50px; */
+        }
+        li{
+            background: #0000ff;
+            float: left;
+        }
+
+        .main{
+            background: #ff0000;
+        }
+        .main .sub{
+            background: #0000ff;
+            float: left;
+        }
+        .clear{
+            clear: both;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul> -->
+
+   <!-- <div class="main">
+       <div class="sub">1</div>
+       <div class="sub">2</div>
+       <div class="clear"></div>
+   </div> -->
+
+   <div class="main clearfix">
+        <div class="sub">1</div>
+        <div class="sub">2</div>
+    </div>
+
+    <div class="clearfix">
+        
+    </div>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            display: none;
+            /* opacity: 0; */
+            /* visibility: hidden; */
+            
+        }
+        #div2{
+            height: 300px;
+            background: #ffff00;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <script>
+        oDiv = document.getElementById('div1');
+        oDiv.onclick = function () {
+            console.log(1111);
+        }
+    </script>
+    
+</body>
+</html>

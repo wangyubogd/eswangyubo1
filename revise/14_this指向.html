@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.函数中 window
+        /* function a(){
+            console.log(this);
+        }
+
+        a() */
+        //2定时器中 
+
+        // setInterval(function(){
+        //     console.log(this)
+        // },100)
+
+        //3 对象
+        /* obj = {
+            name:'zs',
+            say : function(){
+                console.log(this);
+            }
+        }
+        
+        obj.say();
+ */
+        //4 事件中  this执行点击的元素
+
+        //5 类中 this指向实例化对象 
+
+
+        function a(a,b){
+            console.log(this,a,b);
+        }
+        obj = {
+            name:'zs'
+        }
+
+        //call()  apply() bind()
+        // a.call(obj,'1','2');
+        // a.apply(obj,['1','2']);
+        a.bind(obj,'1','2')();
+
+        
+
+
+
+
+
+        
+        
+        
+    </script>
+    
+</body>
+</html>

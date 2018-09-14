@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    js数据类型
+
+    基本数据类型  number string boolean null undefined symbol
+
+        null  document.getElementById('div1')
+
+        undefined  变量定义了没有赋值
+                   数组越界
+                   访问对象没有的属性
+                   函数默认返回undefined
+
+
+        typeof   'abc'    "string"
+                  123     "number"
+                  true    "boolean"
+                  null    "object"
+                  undefined  "undefined"
+                  函数       "function"
+                  [1,2,3]     "object"
+                  {name:'zs'}  "object"
+
+
+    引用数据类型  array object
+
+
+
+
+            
+
+    <script>
+    
+        // var a 
+
+        // console.log(a);
+
+        // var arr = [1,2,3];
+        // console.log(arr[5])
+
+        // var obj = {
+        //     name:'zs'
+        // }
+
+        //  console.log(obj.age)
+
+
+        //  function a(){
+        //      console.log(111)
+
+        //  }
+
+        //  console.log(  a()  );
+
+        //  console.log( typeof 'abc');
+        //  console.log( typeof obj);
+
+
+         
+         var arr = [1,2,3];
+         var obj = {
+             name:'zs'
+         }
+
+         console.log(  arr.constructor  == Array ) //.constructor 返回实例的构造函数
+         console.log(  obj.constructor == Object) //.constructor 返回实例的构造函数
+
+         console.log( arr instanceof Array) //判断arr是否是Array的实例化对象
+    
+         console.log( Array.isArray(arr) );
+
+         
+    </script>
+    
+</body>
+</html>

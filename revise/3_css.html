@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    1.常见选择器
+        id
+        class
+        标签
+        div p 后代选择器
+        div>p 子代选择器
+        E+F  E后边紧邻的兄弟
+        E~F  E后边所有兄弟
+        div,p 分组选择器
+        伪类选择器 :hover{}
+        伪元素选择器 ::after{
+                    }
+        属性选择器 div[a]
+    2.css优先级
+        !import 最高
+        style   1000
+        id      100
+        class  伪类 属性  10  
+        标签 伪元素 1
+
+    3.float 
+        left right
+    
+        清楚浮动方式：
+            1 父元素加overflow:hidden
+            2 父元素 float
+            3 已知父元素高度 设置高
+            4 clearfix
+                .clearfix::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+    4.定位 position
+        static 默认的
+        absolute 绝对定位  相对于最近已定位的祖先元素 定位后空间释放
+        relative 相对定位  相对于自己初始位置  定位后空间不释放
+        fixed  固定定位 相对浏览器位置 定位后空间释放 
+        sticky 粘性定位  相当于吸顶效果
+
+    5.盒模型
+        标准盒模型
+            width属性  content的宽度 
+        怪异盒模型（ie6 及ie6以下浏览器 不设置doctype）
+            width属性  content + padding +border 宽度
+
+        box-sizing :content-box 标准
+                    border-box 怪异
+    
+    6.外边距合并
+        
+        外边距合并
+            1.父元素overflow :hidden;
+            2.父元素浮动或定位
+            3.子元素浮动或定位
+            3.父元素加边框 
+    
+    7、BFC
+                    
+        BFC(Block formatting context)直译为"块级格式化上下文"。
+        它是一个独立的渲染区域，只有Block-level box参与， 
+        它规定了内部的Block-level Box如何布局，并且与这个区域外部毫不相干。
+        
+        BFC布局规则：
+            1、内部的Box会在垂直方向，一个接一个地放置。
+            2、Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠
+            3、每个元素的margin box的左边， 与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。
+            4、BFC的区域不会与float box重叠。
+            5、BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
+            6、计算BFC的高度时，浮动元素也参与计算
+
+        哪些元素会生成BFC?
+            根元素 html
+            float属性不为none
+            position为absolute或fixed
+            display为inline-block, table-cell, table-caption, flex, inline-flex
+            overflow不为visible
+
+        BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
+        https://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html
+
+
+    8.重排 重绘
+
+    1.重绘就是在一个元素的外观被改变，但没有改变布局（宽高）的情况下发生，
+        如改变visibility、outline、背景色等等。
+    2.重排就是DOM的变化影响到了元素的几何属性（宽和高），浏览器会重新计算元素的几何属性
+        ,如：改变窗囗大小、改变文字大小、内容的改变、浏览器窗口变化，style属性的改变等等。
+    3.reflow（回流）：当浏览器发现某个部分发生了点变化影响了布局，需要倒回去重新渲染，
+        内行称这个回退的过程叫 reflow
+
+    
+    9.display : inline block inline-block flex table teble-cell  
+
+    10.显示隐藏  display:none; block;    不占空间  没有事件
+                opacity:0 1   占空间  有事件
+                visibility:hidden visible;  占空间  没有事件
+    11. z-index 
+        定位后层级  
+        正常  z-index值越大  层级越向上
+        如果父元素 跟兄弟之间都有z-index值 ，按照父元素的z-index值算
+       （比较兄弟元素 z-index 时  子元素的z-Index值忽略）
+        
+
+
+
+
+
+    
+    
+
+    
+    
+                
+
+
+    
+                
+    
+    
+    
+    
+
+
+    
+
+
+
+
+
+                    
+
+    
+
+
+
+
+
+
+
+
+
+</body>
+</html>
