@@ -1,0 +1,133 @@
+<template>
+    <div class="apps">
+        <ul class="app1">
+            <li class="status-bar"><img src="../../../status bar.png" height="19" width="726"/></li>
+        </ul>
+        <ul  class="app2">
+            <button class="app7"><img src="../../../返回.png" height="24" width="14"/></button>
+            <li class="liaotian">聊天人昵称</li>
+            <button class="shezhi"><img src="../../../设置.png" height="23" width="46"/></button>
+        </ul>
+        <ul class="xxx"></ul>
+        <ul class="xia"><button class="yinliang"><img src="../../../音量.png"alt=""></button>
+            <input class="shuchu" type="text">
+            <button class="fasong">发送</button>
+        </ul>
+    </div>
+</template>
+<script>
+    export default {
+        name: 'HelloWorld',
+        props: {
+            msg: String,
+        },
+    };
+</script>
+<style scoped lang="scss">
+    .apps {
+        width: 750px;
+        height: 1334px;
+    }
+    .app1 {
+        width: 750px;
+        height: 40px;
+        background-color: #ffffff;
+        text-align:center;
+    }
+    .status-bar {
+        width: 726px;
+        height: 19px;
+        margin: auto;
+        line-height: 40px;
+        position: absolute;
+        left: 12px;
+        top: 11px;
+    }
+    .app2 {
+        width: 750px;
+        height: 88px;
+        background-color: #ffffff;
+        text-align:center;
+    }
+    .app7 {
+        float: left;
+        position: absolute;
+        left: 30px;
+        top: 72px;
+        margin: 0;
+        padding: 0;
+        border: 1px solid transparent;
+        background: white;
+    }
+    .liaotian {
+        height: 29px;
+        font-family: PingFangSC-Regular;
+        font-size: 30px;
+        display:inline;
+        line-height: 88px;
+    }
+    .shezhi{
+        margin: 0;
+        padding: 0;
+        border: 1px solid transparent;
+        background: white;
+        color: #333333;
+        float: right;
+        position: relative;
+        right: 30px;
+        top: 32px;
+
+    }
+    .xia {
+        border: none;
+        width: 750px;
+        height: 98px;
+        background-color: #ffffff;
+        border: solid 1px #dddddd;
+        position: absolute;
+        top: 1236px;
+        border:none;
+    }
+    .yinliang {
+        width: 40px;
+        height: 40px;
+        background: white;
+        position: relative;
+        left: 30px;
+        top: 29px;
+        margin: 0;
+        padding: 0;
+        border: 1px solid transparent
+    }
+    .shuchu {
+        width: 488px;
+        height: 58px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: solid 1px #dddddd;
+        position: absolute;
+        float: left;
+        left: 100px;
+        bottom: 19px;
+    }
+    .fasong {
+        width: 100px;
+        height: 60px;
+        background-color: #2196f3;
+        border-radius: 5px;
+        float: right;
+        position: relative;
+        right: 30px;
+        top: 19px;
+        color: #ffffff;
+        font-size: 24px;
+    }
+    .xxx{
+        background: #eeeeee;
+        width: 750px;
+        height: 1108px;
+    }
+</style>
+<style scoped lang="scss">
+
+</style>
